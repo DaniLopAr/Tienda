@@ -1,0 +1,127 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 26 may 2023, 08:45:32
+    Author     : Daniel Lopez
+*/
+* {
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+   padding: 80px 20px 0;
+   background-color: bisque;
+   font-family: sans-serif;
+    
+}
+
+section p {
+    background-color: green;
+    color: yellow;
+}
+
+h1,h2 {
+    text-align: center;
+    
+}
+
+h1 {
+    
+    background-color: black;
+    color: white;
+}
+
+h2 {
+   
+    background-color: brown;
+    color: green;
+        
+    
+}
+
+footer {
+    text-align: center;
+    backface-color: blueviolet;
+    color: white;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+        
+}
+
+nav a:hover {
+    
+    background-color: yellow;
+    color: red;
+        
+}
+
+footer p{
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+tbody tr:nth-child(odd) {
+    backface-color: black;
+}
+
+/* definir el uso de etiquetas coin id */
+
+#logo {
+    font-size: 22px;
+}
+
+/* definir el uso de etiquetas coin class mas de una vez en la pagina */
+
+.aviso {
+    font-family: fantasy;
+}
+
+.encabezado {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    
+}
+
+.lateral {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    bottom: 20px;
+    width: 20%;
+    background-color: aquamarine;
+}
+
+.contenido {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    background-color: bisque;
+}
+
+.pie {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    widht: 20px;
+    background-color: bisque;
+}
