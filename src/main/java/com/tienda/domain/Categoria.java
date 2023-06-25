@@ -19,7 +19,7 @@ public class Categoria implements Serializable{
     private String rutaImagen;
     private boolean activo;
     
-    pupublic Categoria(String descripcion, boolean activo){
+    public Categoria(String descripcion, boolean activo){
         this.activo=activo;
         this.descripcion=descripcion;
     }

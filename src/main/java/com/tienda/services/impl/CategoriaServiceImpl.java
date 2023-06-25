@@ -4,11 +4,15 @@
  */
 package com.tienda.services.impl;
 
-import com.tienda.service.CategoriaService;
+import com.tienda.dao.CategoriaDao;
 import com.tienda.domain.Categoria;
+import com.tienda.services.CategoriaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+
+@Service
 public class CategoriaServiceImpl implements CategoriaService {
 
     //la anotaciuon autowired crea un unico objeti sin hacer new y se mantiene
