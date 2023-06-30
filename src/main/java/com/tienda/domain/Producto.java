@@ -7,23 +7,26 @@ import java.io.Serializable;
 
 @Data
 @Entity
-@Table(name="categoria")
-public class Categoria implements Serializable{
+@Table(name="producto")
+public class Producto implements Serializable{
     private static final long serialVersionUID = 1L;
     
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name="id_categoria")
-    private long id_Categoria;
+    @Column(name="id_producto")
+    private Long idProducto;
+    private long idCategoria;
     private String descripcion;
+    private String detalle;
+    private double precio;
+    private int existencias;
     private String rutaImagen;
     private boolean activo;
     
-    
-    public Categoria(){
+    public Producto(){
     }
     
-    public Categoria(String descripcion, boolean activo){
+    public Producto(String descripcion, boolean activo){
         this.activo=activo;
         this.descripcion=descripcion;
     }
