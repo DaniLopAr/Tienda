@@ -1,22 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.tienda.services.impl;
 
 import com.tienda.dao.ProductoDao;
 import com.tienda.domain.Producto;
-import com.tienda.services.ProductoService;
+import com.tienda.service.ProductoService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-
 @Service
 public class ProductoServiceImpl implements ProductoService {
 
-    //la anotaciuon autowired crea un unico objeti sin hacer new y se mantiene
+    //La anotacion autowired crea un unico objeto sin hacer new.
     @Autowired
     private ProductoDao productoDao;
 
@@ -48,5 +43,25 @@ public class ProductoServiceImpl implements ProductoService {
         productoDao.delete(producto);
     }
     
-
+    //Se implementa el método para recuperar los productos con una consulta ampliada
+    @Override
+    @Transactional(readOnly = true)
+    public List<Producto>buscaProductosPorPrecioEntre(double precioInf, double precioSup) {
+        return productoDao.findByPrecioBetweenOrderByDescripcion(precioInf, precioSup);
+    }
+    
+    //Se implementa el método para recuperar los productos con una consulta JPQL
+    @Override
+    @Transactional(readOnly = true)
+    public List<Producto>consultaJPQL(double precioInf, double precioSup) {
+        return productoDao.consultaJPQL(precioInf, precioSup);
+    }
+    
+    //Se implementa el método para recuperar los productos con una consulta SQL
+    @Override
+    @Transactional(readOnly = true)
+    public List<Producto>consultaSQL(double precioInf, double precioSup) {
+        return productoDao.consultaSQL(precioInf, precioSup);
+    }
+    
 }
